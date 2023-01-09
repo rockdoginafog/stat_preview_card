@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root{
+    --very-dark-blue: hsl(233, 47%, 7%);
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+}
+
+@media screen and (max-width: 950px){
+
+    main{
+        flex-direction: column;
+        width: 450px;
+        margin: 50px;
+    }
+    
+    .attribution{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    main{
+        width: 350px;
+    }
+
+    .span_groups{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .attribution{
+        display: none;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--very-dark-blue);
+}
+
+main{
+    display: flex;
+    max-width: 900px;
+    border-radius: 10px;
+    margin: 25px;
+    background-color: var(--dark-desaturated-blue);
+}
+
+.text{
+    color: var(--white);
+}
+
+h1{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+p{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-top: 35px;
+    font-size: 15px;
+    color: var(--slightly-transparent-white);
+    line-height: 25px;
+}
+
+.span_groups{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 60px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.span_group{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+span:nth-child(even){
+    letter-spacing: 2px;
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+span:nth-child(odd){
+    font-size: 25px;
+}
+
+.photo{
+    padding: 2%;
+    border-radius: 25px;
+    max-width: 450px;
+    filter: invert(1%) sepia(10%) saturate(3241%) hue-rotate(241deg) brightness(90%) contrast(91%);
+    transition: 0.5s ease;
+}
+
+.photo:hover{
+    transform: scale(1.01);
+}
+
+.text{
+    padding: 50px;
+}
+
+.word_insights{
+    display: inline;
+}
+
+.attribution{
+    color: white;
+    opacity: 0.5;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+}
+
+.attribution a{
+    text-decoration: underline;
+    color: white;
+    transition: 0.3s linear;
+}
+
+.attribution a:hover{
+    color: var(--soft-violet);
+}
